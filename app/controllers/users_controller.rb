@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-    # before_action :require_login
+    before_action :require_login, only: [:show]
 
     def new
-
+        @user = User.new
     end
 
     def create
@@ -27,9 +27,10 @@ class UsersController < ApplicationController
         params.require(:user).permit(:name, :password, :happiness, :nausea, :tickets, :height)
     end
 
-    # def require_login
-    #     unless session.include? :user_id
-    #         redirect_to root_path
-    #     end
-    # end
+    def require_login
+        # return head(:forbidden) unless session.include? :user_id
+        unless session.include? :user_id
+            redirect_to root_path
+        end
+    end
 end

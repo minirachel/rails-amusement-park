@@ -15,10 +15,5 @@
     <li>Tickets: <%= @user.tickets%></li>
 </ul>
 <br>
-<form method='post'>
-    <input name='Sign Out'>
-    <input type='submit' value='signout'>
-</form>
-
-
+<%= link_to "Log Out", signout_path, method: :post%>
 

@@ -14,4 +14,20 @@ User Signup
 - non-admin
 - add session hash
 
+User Signup successfully signs up as admin is not working because of seeded db 
+- amy poehler is user 1 not walt disney
+
 <!-- <%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %> -->
+
+<!-- signup page -->
+<%= form_tag ({controller: 'users', action: 'create', method: 'post'}) do %>
+  Name: <input type="text" id="name" name="user[name]"><br>
+  Password: <input type="text" id="password" name="user[password]"><br>
+  Happiness: <input type="text" id="happiness" name="user[happiness]"><br>
+  Nausea: <input type="text" id="nausea" name="user[nausea]"><br>
+  Height: <input type="text" id="height" name="user[height]"><br>
+  Tickets: <input type="text" id="tickets" name="user[tickets]"><br>
+  Admin? <input type="checkbox" id="admin" name="user[admin]" value="true"><br>
+
+  <input type=submit value='Create User'>
+<% end %>

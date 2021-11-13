@@ -19,8 +19,7 @@ class SessionsController < ApplicationController
 
     # may need to EDIT session delete to clear more params??
     def destroy
-        if !session[:name].nil?
-            session.delete :name
-        end
+        session.delete(:user_id)
+        redirect_to root_path
     end
 end
