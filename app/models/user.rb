@@ -4,11 +4,20 @@ class User < ApplicationRecord
     has_many :rides
     has_many :attractions, through: :rides
 
+    validates :name, presence: true
+    validates :password, presence: true
+    # validates :happiness, presence: true
+    # validates :nausea, presence: true
+    # validates :height, presence: true
+    # validates :tickets, presence: true
+
     def mood
-        if nausea > happiness
-            "sad"
-        else
-            "happy"
+        if !nausea.nil? && !happiness.nil?
+            if nausea > happiness
+                "sad"
+            else
+                "happy"
+            end
         end
     end
 end

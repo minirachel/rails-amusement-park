@@ -1,5 +1,11 @@
 <h1>Hi, <%= @user.name %>!</h1>
 
+<% if @user.admin %>
+    <p>ADMIN</p>
+<% end %>
+
+<br>
+
 <h2>Ride Overview</h2>
 <ul>
     <li>Mood: <%= @user.mood%></li>
@@ -8,3 +14,11 @@
     <li>Height: <%= @user.height%></li>
     <li>Tickets: <%= @user.tickets%></li>
 </ul>
+<br>
+<form method='post'>
+    <input name='Sign Out'>
+    <input type='submit' value='signout'>
+</form>
+
+
+

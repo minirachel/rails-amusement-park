@@ -1,10 +1,12 @@
 <!-- signup page -->
 <%= form_tag ({controller: 'users', action: 'create', method: 'post'}) do %>
-  <input type="text" id="name" name="user[name]"><br>
-  <input type="text" id="password" name="user[password]"><br>
-  <input type="text" id="happiness" name="user[happiness]"><br>
-  <input type="text" id="nausea" name="user[nausea]"><br>
-  <input type="text" id="height" name="user[height]"><br>
-  <input type="text" id="tickets" name="user[tickets]"><br>
+  Name: <input type="text" id="name" name="user[name]"><br>
+  Password: <input type="text" id="password" name="user[password]"><br>
+  Happiness: <input type="text" id="happiness" name="user[happiness]"><br>
+  Nausea: <input type="text" id="nausea" name="user[nausea]"><br>
+  Height: <input type="text" id="height" name="user[height]"><br>
+  Tickets: <input type="text" id="tickets" name="user[tickets]"><br>
+  Admin? <input type="checkbox" id="user_admin" name="user[admin]" value="true"><br>
+
   <input type=submit value='Create User'>
 <% end %>

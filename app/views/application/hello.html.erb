@@ -1,5 +1,4 @@
-<h1>Hi, <%= session[:name] %>.</h1>
-<%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
-  <input type=submit value='logout'>
-<% end %>
+<h1>This is AMUZE</h1>
 
+<%= link_to "Sign In", signin_path %><br>
+<%= link_to "Sign Up", new_user_path %>
