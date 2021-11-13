@@ -1,0 +1,10 @@
+<!-- signup page -->
+<%= form_tag ({controller: 'users', action: 'create', method: 'post'}) do %>
+  <input type="text" id="name" name="user[name]"><br>
+  <input type="text" id="password" name="user[password]"><br>
+  <input type="text" id="happiness" name="user[happiness]"><br>
+  <input type="text" id="nausea" name="user[nausea]"><br>
+  <input type="text" id="height" name="user[height]"><br>
+  <input type="text" id="tickets" name="user[tickets]"><br>
+  <input type=submit value='Create User'>
+<% end %>
