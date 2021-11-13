@@ -5,7 +5,7 @@ class User < ApplicationRecord
     has_many :attractions, through: :rides
 
     validates :name, presence: true
-    validates :password, presence: true
+    validates :password, presence: true, on: :create
     # validates :happiness, presence: true
     # validates :nausea, presence: true
     # validates :height, presence: true
